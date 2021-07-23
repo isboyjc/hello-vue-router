@@ -1,5 +1,7 @@
 # hello-vue-router
 
+跟着来，你也可以手撸VueRouter
+
 ## Project setup
 ```
 yarn install
