@@ -2,7 +2,7 @@
  * @Author: isboyjc
  * @Date: 2021-07-21 16:10:07
  * @LastEditors: isboyjc
- * @LastEditTime: 2021-07-23 05:33:36
+ * @LastEditTime: 2021-07-29 01:55:33
  * @Description: 路由模式HTML5History子类
  */
 import { History } from './base'
@@ -49,7 +49,7 @@ export class HTML5History extends History {
   // 跳转到指定URL，替换history栈中最后一个记录
   replace(location, onComplete) {
     this.transitionTo(location, (route) => {
-      window.history.replaceState(window.history.state, '', this.current.fullPath)
+      window.history.replaceState(window.history.state, '', route.fullPath)
       onComplete && onComplete(route)
     })
   }
